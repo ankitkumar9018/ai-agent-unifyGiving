@@ -20,7 +20,7 @@ def get_ai_response(question):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",  # Or 'gpt-4' if you have access
         messages=[
-            {"role": "system", "content": "You are a helpful accountant and you give detailed tax breakdown."},
+            {"role": "system", "content": "You are a helpful accountant and you give detailed tax breakdown and also the percentage."},
             {"role": "user", "content": question}
         ],
         max_tokens=300,  # Increase max_tokens to allow for a longer response
